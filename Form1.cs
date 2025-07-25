@@ -53,9 +53,9 @@ namespace t4
         private void button2_Click(object sender, EventArgs e)
         {
             // Очищаем предыдущие данные
-            chart1.Series["sins"].Points.Clear();
-            chart1.Series["sin2"].Points.Clear();
-            chart1.Series["sin3"].Points.Clear();
+            chart2.Series["sins"].Points.Clear();
+            chart2.Series["sin2"].Points.Clear();
+            chart2.Series["sin3"].Points.Clear();
 
             // Генерируем точки для синуса
             for (double x = 0; x < 2 * Math.PI; x += 0.1)
@@ -64,9 +64,9 @@ namespace t4
                 double z = Math.Sin(x)*Math.Sin(2*x) * Math.Sin(3 * x) * Math.Sin(4 * x);
 
                 // Добавляем точки в разные серии (для демонстрации разных типов графиков)
-                chart1.Series["sins"].Points.AddXY(x, y);    // Точечный график
-                chart1.Series["sin2"].Points.AddXY(x, y);    // Линейный график
-                chart1.Series["sin3"].Points.AddXY(x, z);    // Быстрая линия
+                chart2.Series["sins"].Points.AddXY(x, y);    // Точечный график
+                chart2.Series["sin2"].Points.AddXY(x, y);    // Линейный график
+                chart2.Series["sin3"].Points.AddXY(x, z);    // Быстрая линия
             }
         }
     }
